@@ -22,7 +22,7 @@ header,
 footer {
   color: white;
   background-color: #1A237E;
-  margin: 0em 4em 0.25em 4em;
+  margin: 0 4em 0.25em 4em;
 }
 
 header h1 {
