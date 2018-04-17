@@ -1,97 +1,157 @@
 <!DOCTYPE html>
 <html lang="en">
-<head >
-   <meta charset="utf-8">
-   <title>Lab 04</title>
-   <link rel="stylesheet" href="./css/reset.css" />
-   <link rel="stylesheet" href="./css/Lab04.css" />
-    <link rel="stylesheet" href="css/Lab04.css">
-    <link rel="stylesheet" href="css/reset.css">
+<head>
+    <meta charset="utf-8">
+    <title>Lab 04</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-     <h1>Share Your Travels</h1>
-     <p>let us know where you've been</p>
+<header class="container">
+    <nav class="collapse navbar-collapse navbar navbar-expand-md navbar-light row">
+        <div class="col-sm-auto text-center">
+            <h1><strong>Share Your Travels</strong></h1>
+            <small><em>Let us know where you've been</em></small>
+        </div>
+        <ul class="collapse navbar-collapse navbar-nav justify-content-end nav-fill col-md-6 offset-md-1">
+            <li><a href="Lab02.html" class="text-muted col-md-auto">Gallery</a></li>
+            <li><a href="#" class="text-muted col-md-auto">Feeling Lucky</a></li>
+            <li><a href="#" class="text-muted col-md-auto">User</a></li>
+        </ul>
+    </nav>
 </header>
 <main>
-   <section>
-       <form>
-           <fieldset>
-               <legend>photo details</legend>
-               <table>
-                   <tbody>
-                   <tr>
-                       <td colspan="2">
-                           <p>Title</p>
-                           <input type="text" name="title" placeholder="Give your photo a descriptive name">
-                           <p>Description</p>
-                           <textarea rows="5"  placeholder="Adding a rich description will help with search results"></textarea>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td >
-                           <p>Continent</p>
-                           <label><select>
-                               <option>Choose continent</option>
-                           </select></label>
-                           <p>Country</p>
-                           <label><select>
-                               <option>Choose country</option>
-                           </select></label>
-                           <p>City</p>
-                           <label><input type="text" name="city"></label>
-                       </td>
-                       <td>
-                           <div class="box">
-                               <p>Copyright?</p>
-                               <label><input type="radio" value="All rights reserved" />All rights reserved<br></label>
-                               <label><input type="radio" value="Creative Commons" checked="checked"/>Creative Commons</label>
-                           </div>
-                           <div class="box">
-                               <p>Creative Commons Types</p>
-                               <label><input type="checkbox" value="Attribution" />Attribution<br></label>
-                               <label><input type="checkbox" value="Noncommercial" />Noncommercial<br></label>
-                               <label><input type="checkbox" value="No Derivative Works" />No Derivative Works</label>
-                           </div>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td colspan="2">
-                           <div  class="rectangle">
-                           <label>I accept the software license <input type="checkbox" value="acception" /></label>
-                           </div>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td>
-                           <p>Rate this photo:</p>
-                           <label><input type="number"></label>
-                           <p>Color Collection:</p>
-                           <label><input type="color"></label>
-                       </td>
-                       <td>
-                           <div class="box">
-                               <p>Date Taken:</p>
-                               <label><input type="date"></label>
-                               <p>Time Taken:</p>
-                               <label><input type="time"></label>
-                           </div>
-                       </td>
-                   </tr>
-                   <tr>
-                       <td colspan="2" >
-                           <div class="rectangle">
-                               <label><input type="submit" class="rounded" value="提交"></label>
-                               <label><input type="reset" class="rounded" value="Clear Form"></label>
-                           </div>
-                       </td>
-                   </tr>
-                   </tbody>
-               </table>
-           </fieldset>
-       </form>
-   </section>
-</main>  
+    <div class="container panel panel-default border rounded">
+        <form>
+            <fieldset>
+                <legend>Photo Details</legend>
+                <table>
+                    <tbody>
+                    <tr>
+                        <td colspan="2">
+                            <div class="form-group">
+                                <label>Title</label>
+                                <input type="text" name="title" class="form-control"
+                                       placeholder="Give your photo a descriptive name">
+                            </div>
+                            <div class="form-group">
+                                <label>Description</label>
+                                <textarea rows="2" class="form-control"
+                                          placeholder="Adding a rich description will help with search results"></textarea>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="form-group">
+                                <label>Continent</label>
+                                <select class="form-control">
+                                    <option>Choose continent</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Country</label>
+                                <select class="form-control">
+                                    <option>Choose country</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>City</label>
+                                <input class="form-control" type="text" name="city">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="box form-group">
+                                <label>Copyright?</label>
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio" value="All rights reserved"/>All rights
+                                        reserved<br></label>
+                                </div>
+                                <div class="radio">
+                                    <label><input type="radio" name="optradio" value="Creative Commons"
+                                                  checked="checked"/>Creative Commons</label>
+                                </div>
+                            </div>
+                            <div class="box form-group">
+                                <label>Creative Commons Types</label><br>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value="Attribution"/>Attribution<br>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" value="Noncommercial"/>Noncommercial<br>
+                                    </label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" value="No Derivative Works"/>No Derivative Works
+                                    </label>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="rectangle form-group">
+                                <label><input type="checkbox" value="acception"/>I accept the software license </label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label>Rate this photo:</label>
+                                <input class="form-control" type="number">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label>Color Collection:</label>
+                                <input class="form-control" type="text">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group">
+                                <label>Date Taken:</label>
+                                <input class="form-control" type="date">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <label>Time Taken:</label>
+                                <input class="form-control" type="time">
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-dark">Sumbmit</button>
+                                <button type="button" class="btn btn-dark">Clear Form</button>
+                            </div>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </form>
+    </div>
+</main>
 
 
 </body>
